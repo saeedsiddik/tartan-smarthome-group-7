@@ -24,10 +24,8 @@ jobs:
 #     run this if gradlew is not working; we need to create a wrapper for gradle
     - name: Create wrapper
       run: gradle wrapper
-      working-directory: smarthome/Platform/
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew 
-      working-directory: smarthome/Platform/
     - name: Build with Gradle
       working-directory: smarthome/Platform/
       run: ./gradlew build

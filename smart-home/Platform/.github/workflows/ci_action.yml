@@ -5,9 +5,9 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ Ivan ]
+    branches: saeed_branch-tartan-smarthome-group-7
   pull_request:
-    branches: [ Ivan ]
+    branches: saeed_branch-tartan-smarthome-group-7
 
 jobs:
   build:

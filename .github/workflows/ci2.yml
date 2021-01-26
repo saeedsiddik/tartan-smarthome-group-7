@@ -5,9 +5,10 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ Ivan ]
+#     branches: [ Ivan ]
+    branches: saeed_branch-tartan-smarthome-group-7
   pull_request:
-    branches: [ Ivan ]
+    branches: saeed_branch-tartan-smarthome-group-7
 
 jobs:
   build:
@@ -20,9 +21,14 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+#     run this if gradlew is not working; we need to create a wrapper for gradle
     - name: Create wrapper
       run: gradle wrapper
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew 
     - name: Build with Gradle
+      working-directory: ./smarthome/Platform/
       run: ./gradlew build
+    - name: Testing with gradle
+      working-directory: ./smarthome/Platform/
+      run: ./gradlew test

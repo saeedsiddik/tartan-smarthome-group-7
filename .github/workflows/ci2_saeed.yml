@@ -30,7 +30,7 @@ jobs:
     - name: Build with Gradle
       working-directory: ./smart-home/Platform/
       run: ./gradlew build
-#     - name: Testing with gradle
-#       working-directory: ./smarthome/Platform/
-#       run: ./gradlew test
+    - name: Testing with gradle
+      working-directory: ./smart-home/Platform/
+      run: ./gradlew test
 

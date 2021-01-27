@@ -24,6 +24,11 @@ jobs:
     - name: Create wrapper
       run: gradle wrapper
     - name: Grant execute permission for gradlew
+      working-directory: ./smart-home/Platform/
       run: chmod +x gradlew 
     - name: Build with Gradle
+      working-directory: ./smart-home/Platform/
       run: ./gradlew build
+    - name: Testing with gradle
+      working-directory: ./smart-home/Platform/
+      run: ./gradlew test
